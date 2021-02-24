@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        background: linear-gradient(to left, #390888, #08000c);
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-height: 1200px;
+        margin: 40px 0;
+      }
+
+      .container .card {
+        position: relative;
+        min-width: 320px;
+        height: 440px;
+        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+          inset -5px -5px 15px rgba(225, 225, 225, 0.1),
+          5px 5px 15px rgba(0, 0, 0, 0.3),
+          -5px -5px 15px rgba(225, 225, 225, 0.1);
+        border-radius: 15px;
+        margin: 30px;
+      }
+
+      .container .card .main-container .img-1 {
+        background-image: url("/Images/Hex.jpg");
+
+        background-size: cover;
+      }
+      .container .card .img-2 {
+        background-image: url("/Images/tumblr_1ce68fb73b2ce6af6449ad97c5752002_20af53db_500.gif");
+        background-size: cover;
+      }
+      .container .card .img-3 {
+        background-image: url("/Images/anima-2.gif");
+        background-size: cover;
+      }
+      .container .card .img-4 {
+        background-color: grey;
+        background-size: cover;
+      }
+      .container .card .img-5 {
+        background-image: url("/Images/interactive-presentation-header\ \(1\).gif");
+        background-size: cover;
+      }
+
+      #one {
+        font-size: 40px;
+        color: black;
+      }
+      #two {
+        font-size: 40px;
+        color: white;
+      }
+      #three {
+        font-size: 40px;
+        color: black;
+      }
+      #four {
+        font-size: 40px;
+        color: black;
+      }
+      #five {
+        font-size: 40px;
+        color: black;
+      }
+
+      .main-container {
+        position: relative;
+        background: green;
+      }
+
+      .container .card .main-container .box {
+        height: 25em;
+
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        border: 2px solid #1e1f23;
+        border-radius: 15px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        /* backface-visibility: hidden; */
+        /* background-image: url("Hex.jpg"); */
+        /* background-size: cover; */
+      }
+
+      .back {
+        position: absolute;
+        width: 101%;
+        height: 101%;
+
+        background: grey;
+        border: 4px solid #1e1f23;
+        border-radius: 15px;
+        transform: rotateY(180deg);
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: white;
+        z-index: 1;
+        padding-top: 20px;
+      }
+
+      .container .card .main-container .box:hover {
+        /* transform: translateY(-70px); */
+        /* transform: rotateY(180deg); */
+      }
+
+      .container .card .main-container .box .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .container .card .main-container .box .content h3 {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: white;
+        z-index: 1;
+        transition: 0.5s;
+        font-family: "Reggae One", cursive;
+      }
+
+      .container .card .main-container .box .content a {
+        position: relative;
+        display: inline-block;
+        padding: 8px 20px;
+        background: rgb(23, 138, 184);
+
+        margin-top: 15px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 400;
+        color: black;
+      }
+
+      /* Button */
+      .button {
+        background-color: DodgerBlue; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      /* Icon */
+      .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      /* Darker background on mouse-over */
+      .btn:hover {
+        background-color: RoyalBlue;
+      }
+
+
+     /* Nav-bar css */
+     nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  /* background: #1b1b1b; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+    </style>
+
+    <!--  links for icon -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="logo">IDM-2021</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+       
+      
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="/Events/Events.html">Events</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+   
+
+
+
+    <div class="container">
+      <div class="card">
+        <div class="main-container">
+          <div class="box img-1" id="card1">
+            <div class="back">
+              <p>
+                Hex is a two-player abstract strategy board game in which
+                players attempt to connect opposite sides of a hexagonal board.
+                The structure of the tournament will be based on the elimination
+                process.
+              </p>
+              <br /><br /><br /><br />
+              <button  class="btn" onclick="front1()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="content">
+              <h3 id="one">Hex Tournament</h3>
+              <button class="button" onclick="Back1()">Read more..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="main-container">
+          <div class="box img-2" id="card2">
+            <div class="back">
+              <p>
+                This will be a cipher solving tournament held on virtual
+                platforms. Fun and exciting rounds are planned for the same. It
+                will be open to all and participants are allowed to use any
+                resources they wish.
+              </p>
+              <br /><br /><br /><br />
+              <button class="btn" onclick="front2()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="content">
+              <h3 id="two">Cipher 2.0</h3>
+
+              <button  class="button" onclick="Back2()">Read more..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="main-container">
+          <div class="box img-3" id="card3">
+            <div class="back">
+              <p>
+                This will be an event based on treasure hunt events. It will be
+                an elaborate puzzle on a website where the participants have to
+                utilize their deductive analytical and mathematical skills and
+                find the treasure. This event will also be open to all.
+              </p>
+              <br /><br /><br /><br />
+              <button class="btn" onclick="front3()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="content">
+              <h3 id="three">Mazematics</h3>
+
+              <button  class="button" onclick="Back3()">Read more..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="main-container">
+          <div class="box img-4" id="card4">
+            <div class="back">
+              <p>
+                This will be an online Paper Presentation Competition. The
+                participants shall submit a research paper and then give a
+                presentation on it. There are no themes nor any restrictions
+                regarding papers. Researchers and all students are welcome same
+                for submissions.
+              </p>
+              <br /><br /><br /><br />
+              <button class="btn" onclick="front4()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="content">
+              <h3 id="four">Paper Presentation</h3>
+
+              <button  class="button" onclick="Back4()">Read more..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="main-container">
+          <div class="box img-5" id="card5">
+            <div class="back">
+              <p>
+                This will be an online Poster Presentation Competition. The
+                participants shall submit a poster and then give a presentation
+                on it. We will recommend posters on the theme for this year’s
+                International Day of Mathematics. Nevertheless, we will be open
+                to the posters on any topic related to Mathematics.
+              </p>
+              This will be an event based on treasure hunt events. It will be an
+              elaborate puzzle on a website where the participants have to
+              utilize their deductive analytical and mathematical skills and
+              find the treasure. This event will also be open to all.
+              <br /><br /><br /><br />
+              <button class="btn" onclick="front5()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="content">
+              <h3 id="five">Poster Presentation</h3>
+
+              <button class="button" onclick="Back5()">Read more..</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // #####################  Flip Javascript  ###############################
+
+      function Back1() {
+        document.getElementById("card1").style.transform = "rotateY(180deg)";
+      }
+
+      function front1() {
+        document.getElementById("card1").style.transform = "rotateY(360deg)";
+      }
+
+      function Back2() {
+        document.getElementById("card2").style.transform = "rotateY(180deg)";
+      }
+
+      function front2() {
+        document.getElementById("card2").style.transform = "rotateY(360deg)";
+      }
+
+      function Back3() {
+        document.getElementById("card3").style.transform = "rotateY(180deg)";
+      }
+
+      function front3() {
+        document.getElementById("card3").style.transform = "rotateY(360deg)";
+      }
+      function Back4() {
+        document.getElementById("card4").style.transform = "rotateY(180deg)";
+      }
+
+      function front4() {
+        document.getElementById("card4").style.transform = "rotateY(360deg)";
+      }
+      function Back5() {
+        document.getElementById("card5").style.transform = "rotateY(180deg)";
+      }
+
+      function front5() {
+        document.getElementById("card5").style.transform = "rotateY(360deg)";
+      }
+    </script>
+  </body>
+</html>
+
+<div class="">
+  <div class="">
+    <div class="">
+      <div class="img-1" id="turn"></div>
+    </div>
+  </div>
+</div>
