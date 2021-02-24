@@ -1,115 +1,39 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-
-    <link rel="stylesheet" href="/CSS-FILES.css/Homepage.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-    <style></style>
+    <link rel="stylesheet" href="/CSS-FILES.css/Pre-loader.css" />
   </head>
   <body>
-    <!--########################### PRE-LOADER PAGE########################### -->
-
-    <!-- <div class="shadows get-1">
-      <img class="logo" class="img" src="/Images/pre-loader.gif" alt="" />
-    </div> -->
-
-    <!-- <div class="get-2"> -->
-      <nav>
-        <div class="logo">IDM-2021</div>
-        <input type="checkbox" id="click" />
-        <label for="click" class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="/Events/Events.html">Events</a></li>
-          <li><a href="#">Teams</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- <div class="content">
-        <div>Responsive Navigation Menu Bar Design</div>
-        <div>using only HTML & CSS</div>
-      </div> -->
-
-      <!-- ################################## COUNTDOWN CLOCK #########################################3 -->
-      <div class="overlay"></div>
-      <div class="wrapper">
-        <div class="">
-          <h1 class="title"><span>IDM COUNTDOWN</span> 2021</h1>
-          <div class="countdown-container">
-            <div>
-              <p id="days" class="big-text">0</p>
-              <span>Days</span>
-            </div>
-            <div>
-              <p id="hours" class="big-text">0</p>
-              <span>Hours</span>
-            </div>
-            <div>
-              <p id="min" class="big-text">0</p>
-              <span>Min</span>
-            </div>
-            <div>
-              <p id="sec" class="big-text">0</p>
-              <span>Sec</span>
-            </div>
-          </div>
-        </div>
+    <div class="body">
+      <span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="base">
+        <span></span>
+        <div class="face"></div>
       </div>
-      <div class="animation-area">
-        <ul class="box-area">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    <!-- </div> -->
+    </div>
+    <div class="longfazers">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1>IDM-2021</h1>
 
     <script>
-      // ######################################  JAVASCRIPT FILES #####################################
-
-      // function loader() {
-      //   document.querySelector(".get-1").style.display = "none";
-      //   document.querySelector(".get-2").style.display = "block";
-      // }
-      // setTimeout(loader, 3000);
-
-      let daysItem = document.querySelector("#days");
-      let hoursItem = document.querySelector("#hours");
-      let minItem = document.querySelector("#min");
-      let secItem = document.querySelector("#sec");
-
-      let countDown = () => {
-        let futureDate = new Date("21 March 2021");
-        let currentDate = new Date();
-        let myDate = futureDate - currentDate;
-
-        let days = Math.floor(myDate / 1000 / 60 / 60 / 24);
-
-        let hours = Math.floor(myDate / 1000 / 60 / 60) % 24;
-
-        let min = Math.floor(myDate / 1000 / 60) % 60;
-
-        let sec = Math.floor(myDate / 1000) % 60;
-
-        daysItem.innerHTML = days;
-        hoursItem.innerHTML = hours;
-        minItem.innerHTML = min;
-        secItem.innerHTML = sec;
-      };
-
-      countDown();
-
-      setInterval(countDown, 1000);
+      function myFunction() {
+        location.replace("Homepage.html");
+      }
+      setTimeout(myFunction, 3000);
     </script>
   </body>
 </html>
